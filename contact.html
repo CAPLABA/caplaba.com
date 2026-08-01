@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — CA_PLA_BA</title>
+  <meta name="description" content="Get in touch or follow along on social media.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">CA_PLA_BA</a>
+      <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero" style="padding-bottom: var(--space-3);">
+      <h1 class="hero__title" style="font-size: clamp(32px, 5vw, 48px);">Contact</h1>
+      <p class="hero__subtitle">Reach out, or follow the log on social media.</p>
+    </section>
+
+    <div class="contact-list">
+      <div class="contact-row">
+        <span class="contact-row__label">Email</span>
+        <!-- Fixed: mailto now matches the visible address -->
+        <a href="mailto:ca_pla_ba@proton.me" class="contact-row__value">ca_pla_ba@proton.me</a>
+      </div>
+      <div id="contact-social-rows"></div>
+    </div>
+
+    <footer class="footer">
+      <span>© 2026 Caplaba</span>
+      <div class="footer__social">
+        <span data-social-list style="display:contents"></span>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

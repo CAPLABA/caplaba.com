@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caplaba — a polymath's log</title>
+  <meta name="description" content="A running record of learning, travel, reading and training — one page for many pursuits.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">CA_PLA_BA</a>
+      <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1 class="hero__title">RECORD OF IDEAS</h1>
+      <p class="hero__subtitle">
+       In constant search for polymathy, I record what I'm learning, where I'm going, what I'm reading,
+        and how I'm training
+      </p>
+      <div class="hero__social" data-social-list></div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2 class="section-header__title">Recent entries</h2>
+        <a href="projects.html" class="section-header__link">View all →</a>
+      </div>
+
+      <!-- Filled in by main.js from js/data.js — nothing to edit here -->
+      <div class="log" id="log-recent"></div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 Caplaba</span>
+      <div class="footer__social">
+        <span data-social-list style="display:contents"></span>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

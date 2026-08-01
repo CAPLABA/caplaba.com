@@ -1,0 +1,451 @@
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+:root {
+  --paper: #F3F2ED;
+  --ink: #1C1B18;
+  --ink-soft: #58564E;
+  --line: #DAD8D0;
+  --line-strong: #B9B6AB;
+
+  /* One typeface, used at different sizes/weights/styles —
+     the monospace feel matches the "log" concept and the
+     Coding pursuit itself. */
+  --font: 'DM Mono', monospace;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 40px;
+  --space-5: 64px;
+  --space-6: 96px;
+
+  --max-width: 960px;
+
+  /* Left/right breathing room — scales with viewport instead
+     of a fixed pixel value, so text is never flush against
+     the edge on any screen size. */
+  --gutter: clamp(20px, 6vw, 64px);
+}
+
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* =========================================================
+   TYPE SCALE
+   Same font throughout; weight/size/style carry the hierarchy.
+   ========================================================= */
+h1, h2, h3 { font-weight: 500; text-align: left; }
+
+/* =========================================================
+   NAV
+   ========================================================= */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav__logo {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-3);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.nav__links a:hover { color: var(--ink); }
+
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-family: var(--font);
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  padding: var(--space-6) 0 var(--space-5);
+  text-align: left;
+}
+
+.hero__title {
+  font-size: clamp(30px, 5.5vw, 56px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  max-width: 16ch;
+}
+
+.hero__subtitle {
+  margin-top: var(--space-3);
+  max-width: 52ch;
+  color: var(--ink-soft);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.hero__social {
+  margin-top: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.hero__social a {
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 2px;
+}
+
+.hero__social a:hover { border-color: var(--ink); }
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.section-header__title {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.section-header__link {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+}
+
+.section-header__link:hover { color: var(--ink); }
+
+/* =========================================================
+   LOG ROW — signature reusable component, rendered by JS
+   from data.js so it works for any number of categories.
+   ========================================================= */
+.log { border-top: 1px solid var(--line); }
+
+.log-row {
+  display: grid;
+  grid-template-columns: 130px 20px 1fr;
+  gap: var(--space-2);
+  align-items: start;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.log-row__date {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  padding-top: 3px;
+  white-space: nowrap;
+}
+
+.log-row__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.log-row__title { font-size: 16px; font-weight: 500; }
+
+.log-row__title a { border-bottom: 1px solid var(--line-strong); }
+.log-row__title a:hover { border-color: var(--ink); }
+
+.log-row__image {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 4px;
+  margin-bottom: var(--space-1);
+}
+
+.log-row__desc {
+  margin-top: 4px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  max-width: 62ch;
+}
+
+.log-row__tag {
+  display: inline-block;
+  margin-top: var(--space-1);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+}
+
+/* =========================================================
+   LOAD MORE — pagination control on Projects
+   ========================================================= */
+.load-more {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-3) 0 var(--space-4);
+}
+
+.load-more-btn {
+  font-family: var(--font);
+  font-size: 13px;
+  padding: 10px 28px;
+  border: 1px solid var(--line-strong);
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+
+.load-more-btn:hover { border-color: var(--ink); color: var(--ink); }
+
+/* =========================================================
+   CV ROWS — About page (Experience, Education, Publications)
+   Same idea as log rows: one repeatable component, rendered
+   from data.js, no dot/category since it doesn't apply here.
+   ========================================================= */
+.cv { border-top: 1px solid var(--line); margin-bottom: var(--space-4); }
+
+.cv-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: var(--space-2);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cv-row__period {
+  font-size: 12px;
+  color: var(--ink-soft);
+  padding-top: 3px;
+  white-space: nowrap;
+}
+
+.cv-row__title { font-size: 16px; font-weight: 500; }
+.cv-row__title a { border-bottom: 1px solid var(--line-strong); }
+.cv-row__title a:hover { border-color: var(--ink); }
+
+.cv-row__org {
+  margin-top: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+}
+
+.cv-row__desc {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+/* =========================================================
+   TAG FILTER
+   Rendered dynamically — see renderFilters() in main.js.
+   ========================================================= */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font);
+  font-size: 12px;
+  padding: 6px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+
+.filter-btn__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.filter-btn:hover { border-color: var(--ink); color: var(--ink); }
+
+.filter-btn.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+/* =========================================================
+   TAGS EXPLAINER
+   "About the tags" section — rendered from CATEGORIES data.
+   ========================================================= */
+.tags-explainer {
+  border-top: 1px solid var(--line);
+  margin-top: var(--space-3);
+}
+
+.tag-explainer-row {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tag-explainer-row__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.tag-explainer-row__desc {
+  margin-top: 6px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  max-width: 62ch;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  border-top: 1px solid var(--line);
+  margin-top: var(--space-6);
+  padding: var(--space-4) 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.footer__social { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.footer__social a:hover { color: var(--ink); }
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+.contact-list { border-top: 1px solid var(--line); margin-top: var(--space-4); }
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+
+.contact-row__label { color: var(--ink-soft); }
+.contact-row__value:hover { color: var(--ink-soft); text-decoration: underline; }
+
+/* =========================================================
+   RESPONSIVE
+   Three checkpoints: tablet, small tablet/large phone, phone.
+   ========================================================= */
+
+/* Tablets (iPad portrait and similar) */
+@media (max-width: 900px) {
+  .hero { padding: var(--space-5) 0 var(--space-4); }
+  .log-row { grid-template-columns: 110px 18px 1fr; }
+  .cv-row { grid-template-columns: 110px 1fr; }
+}
+
+/* Small tablets / large phones — nav collapses here */
+@media (max-width: 700px) {
+  .nav__links { display: none; }
+  .nav__links.is-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: var(--gutter);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: var(--space-2);
+    gap: var(--space-2);
+    z-index: 10;
+  }
+  .nav__toggle { display: block; }
+
+  .footer { flex-direction: column; }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .log-row {
+    grid-template-columns: 18px 1fr;
+    grid-template-areas:
+      "dot date"
+      "content content";
+    row-gap: 4px;
+  }
+  .log-row__dot { grid-area: dot; margin-top: 4px; }
+  .log-row__date { grid-area: date; padding-top: 0; }
+  .log-row__title,
+  .log-row__desc,
+  .log-row__tag { grid-column: 1 / -1; }
+
+  .cv-row { grid-template-columns: 1fr; }
+  .cv-row__period { padding-top: 0; }
+
+  .contact-row { flex-direction: column; gap: 4px; }
+}

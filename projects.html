@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — CA_PLA_BA</title>
+  <meta name="description" content="Every entry in the log, filterable by pursuit.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">CA_PLA_BA</a>
+      <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero" style="padding-bottom: var(--space-3);">
+      <h1 class="hero__title" style="font-size: clamp(28px, 4.5vw, 42px);">Projects</h1>
+      <p class="hero__subtitle">Every entry in one place. Filter by pursuit.</p>
+    </section>
+
+    <!-- Filled in by main.js from js/data.js.
+         To add/rename/remove a pursuit, edit CATEGORIES in data.js —
+         these buttons update automatically. -->
+    <div class="filters" id="filters"></div>
+    <div class="log" id="log-full"></div>
+
+    <!-- Pagination: main.js reveals PAGE_SIZE more entries per click,
+         instead of rendering hundreds of rows at once. -->
+    <div class="load-more">
+      <button id="load-more" class="load-more-btn">Load more</button>
+    </div>
+
+    <section>
+      <div class="section-header">
+        <h2 class="section-header__title">About the tags</h2>
+      </div>
+      <!-- Also generated from CATEGORIES in data.js -->
+      <div class="tags-explainer" id="tags-explainer"></div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 Caplaba</span>
+      <div class="footer__social">
+        <span data-social-list style="display:contents"></span>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

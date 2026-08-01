@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — CA_PLA_BA</title>
+  <meta name="description" content="Background, experience, and publications.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">CA_PLA_BA</a>
+      <button class="nav__toggle" aria-label="Toggle menu">Menu</button>
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero" style="padding-bottom: var(--space-3);">
+      <h1 class="hero__title" style="font-size: clamp(32px, 5vw, 48px);">About</h1>
+      <!-- This paragraph is plain text, not data-driven — write it
+           directly here since it's a one-off piece of writing. -->
+      <p class="hero__subtitle">
+        A short bio goes here: who you are, what this record is for,
+        and why polymathy. Two or three sentences is plenty.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2 class="section-header__title">Experience</h2>
+      </div>
+      <!-- Generated from EXPERIENCE in data.js -->
+      <div class="cv" id="experience-list"></div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2 class="section-header__title">Education</h2>
+      </div>
+      <!-- Generated from EDUCATION in data.js -->
+      <div class="cv" id="education-list"></div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <h2 class="section-header__title">Publications</h2>
+      </div>
+      <!-- Generated from PUBLICATIONS in data.js -->
+      <div class="cv" id="publications-list"></div>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 Caplaba</span>
+      <div class="footer__social">
+        <span data-social-list style="display:contents"></span>
+        <a href="contact.html">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
