@@ -79,5 +79,5 @@ const EDUCATION = [
 ];
 
 const PUBLICATIONS = [
-  { year: '2025', title: 'Arquitectura Social Participativa en un Contexto Biocultural Indígena', venue: 'San Francisco Pichátaro', url: '' },
+  { year: '2025', title: 'Arquitectura Social Participativa en un Contexto Biocultural Indígena - San Francisco Pichátaro', venue: 'Thesis Work', url: '' },
 ];
