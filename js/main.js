@@ -50,7 +50,7 @@ function renderLogRow(entry) {
     <div class="log-row" data-category="${entry.category}">
       <span class="log-row__date">${formatDate(entry.date)}</span>
       <span class="log-row__dot" style="background:${category.color}"></span>
-      <div>
+      <div class="log-row__content">
         ${imageHtml}
         <h3 class="log-row__title">${titleHtml}</h3>
         <p class="log-row__desc">${entry.description}</p>

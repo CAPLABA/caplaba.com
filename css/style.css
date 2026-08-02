@@ -440,9 +440,7 @@ h1, h2, h3 { font-weight: 500; text-align: left; }
   }
   .log-row__dot { grid-area: dot; margin-top: 4px; }
   .log-row__date { grid-area: date; padding-top: 0; }
-  .log-row__title,
-  .log-row__desc,
-  .log-row__tag { grid-column: 1 / -1; }
+  .log-row__content { grid-area: content; }
 
   .cv-row { grid-template-columns: 1fr; }
   .cv-row__period { padding-top: 0; }
