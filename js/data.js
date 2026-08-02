@@ -67,14 +67,17 @@ const ENTRIES = [
 // ABOUT PAGE — replace with your real information
 // -----------------------------------------------------------
 const EXPERIENCE = [
-  { period: '2024 — Present', title: 'Role / project name', org: 'Organization or self-directed', description: 'One or two sentences on what this involved.' },
-  { period: '20XX — 20XX', title: 'Previous role', org: 'Organization', description: 'One or two sentences on what this involved.' },
+  { period: 'Feb 2026 — Present', title: 'Jr. Architect', org: 'TACO — Taller de Arquitectura Contextual' },
+  { period: 'Feb 2023 — May 2024', title: 'Representative', org: 'CONEA — Consejo Nacional de Estudiantes de Arquitectura' },
+  { period: 'Jun 2023 — Aug 2023', title: 'Intern', org: 'Sin Título Arquitectura' },
+  { period: 'Jun 2023 — Aug 2023', title: 'Representative', org: 'CLEA — Coordinadora Latinoamericana de Estudiantes de Arquitectura' },
 ];
 
 const EDUCATION = [
-  { period: '20XX — 20XX', title: 'Degree or program', org: 'Institution' },
+  { period: 'Aug 2020 — Aug 2025', title: "Bachelor's Degree in Architecture", org: 'Universidad Michoacana de San Nicolás de Hidalgo' },
+  { period: 'Feb 2024 — Jun 2024', title: 'International Student Exchange', org: 'Universidad de la Gran Colombia' },
 ];
 
 const PUBLICATIONS = [
-  { year: '2026', title: 'Publication or project title', venue: 'Where it appeared', url: '' },
+  { year: '2025', title: 'Arquitectura Social Participativa en un Contexto Biocultural Indígena', venue: 'San Francisco Pichátaro', url: '' },
 ];
